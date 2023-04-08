@@ -17,7 +17,6 @@ namespace EmployeeWageComputation
             if (employeeAttendence == isPresent)
             {
                 Console.WriteLine("Employee is Present");
-
             }
             else 
             {
