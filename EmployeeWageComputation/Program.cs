@@ -14,25 +14,29 @@ namespace EmployeeWageComputation
             const int IS_PART_TIME = 2;
             const int EMP_RATE_PER_HR = 20;
 
-            //Welcome Message...
+            //Welcome Message
             Console.WriteLine("Welcome to Employee Wage Computation Problem");
-            //EmployeeAttendance
+            //UC1-EmployeeAttendance
             Random random = new Random();
             int employeeAttendance = random.Next(0, 3); //0 to 2
-            if (employeeAttendance == IS_FULL_TIME)
+           //Solving using Switch Case
+            switch (employeeAttendance)
             {
-                Console.WriteLine("Employee is Full-time Present");
-                empHrs = 8;
-            }
-            else if (employeeAttendance == IS_PART_TIME)
-            {
-                Console.WriteLine("Employee is Part-time Present");
-                empHrs = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-                //empHrs = 0;
+                case IS_FULL_TIME:
+                    //Code Block
+                    Console.WriteLine("Employee is Full-time Present");
+                    empHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    //Code Block
+                    Console.WriteLine("Employee is Part-time Present");
+                    empHrs = 4;
+                    break;
+                default:
+                    //Code Block
+                    Console.WriteLine("Employee is Absent");
+                    empHrs = 0;
+                    break;
             }
             //DailyWage
             empWage = EMP_RATE_PER_HR * empHrs;
@@ -41,3 +45,4 @@ namespace EmployeeWageComputation
         }
     }
 }
+
